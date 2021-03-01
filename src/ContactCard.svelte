@@ -3,6 +3,7 @@
   export let jobTitle = "";
   export let userBio = ""
   export let userImage = "";
+  export let password = "";
 </script>
 <style>
   .contact-card {
@@ -17,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     height: 7rem;
+    padding: 1rem;
   }
 
   .thumb {
@@ -25,7 +27,7 @@
   }
 
   .thumb_placeholder {
-    background-color: #5a5a5a;
+    background-color: #ccc;
   }
 
   img {
@@ -64,11 +66,12 @@
 <div class="contact-card">
   <header>
     <div class="thumb" class:thumb_placeholder="{!userImage}">
-      <img src="{userImage}" alt="user name" />
+      <img src="{userImage}" alt="{userName}" />
     </div>
     <div class="user-data">
-      <h1>{userName}</h1>
-      <h2>{jobTitle}</h2>
+      <h1>Name: {userName}</h1>
+      <h2>Title: {jobTitle}</h2>
+      <p>pw: {password}</p>
     </div>
   </header>
   <div class="description">
